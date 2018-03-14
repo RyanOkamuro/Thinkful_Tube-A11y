@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+.header {
+  margin-top: 40px;
+}
+
+
+#js-query {
+  padding-left: 2px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+.videoTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.youtuber {
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.results_page {
+  background-color: #cce5ff;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 3px;
+  margin-bottom: 10px;
+  border: 0.5px solid #99caff;
+}
