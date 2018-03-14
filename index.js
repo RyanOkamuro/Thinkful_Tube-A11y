@@ -17,19 +17,23 @@ function getDataFromApi(searchTerm, callback) {
 //Generate video thumbnail image
 function renderResult(item){
   return `
-  <div class='results_page'>
+  <section role='region' class='results_page'>
   <p class="videoTitle">${item.snippet.title}</p>
   <a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">
-	<img src="${item.snippet.thumbnails.medium.url}" alt="video"></a>
-	<p class="youtuber">More channels: <a href="https://www.youtube.com/channel/${item.snippet.channelId}" target= "_blank">${item.snippet.channelTitle}</a>
-	</p>
-	</div>`;
+  <img src="${item.snippet.thumbnails.medium.url}" alt="video" class="thumbnail_video"></a>
+  <p class="youtuber">More channels: <a href="https://www.youtube.com/channel/${item.snippet.channelId}" target= "_blank">${item.snippet.channelTitle}</a>
+  </p>
+  </section>`;
 }
 
 function displayYoutubeSearchData(data) {
+  const outputElem = $('.js-search-results');
   const results = data.items.map(item =>  
     renderResult(item));
-  $('.js-search-results').html(results);
+  
+  outputElem
+    .prop('hidden', false)
+    .html(results);
 }
 
 

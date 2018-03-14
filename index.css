@@ -16,6 +16,12 @@ form {
   margin-bottom: 30px;
 }
 
+#youtube_mini_search label {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .videoTitle {
   font-size: 18px;
   font-weight: bold;
@@ -36,4 +42,12 @@ form {
   padding: 3px;
   margin-bottom: 10px;
   border: 0.5px solid #99caff;
+}
+
+
+#js-query a:hover,
+#js-query a:focus,
+#youtube_mini_search input:focus,
+#youtube_mini_search button:focus {
+  outline: 5px dotted #ff00ff;
 }
