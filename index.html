@@ -8,18 +8,19 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   </head>
   <body>
-    <main role="main">
-      <form role="form" id="youtube_mini_search" action="#">
-        <header role="banner" class="header">
-        <h1>Youtube Mini Search Engine</h1>
-        </header>
-        <label for="query"></label>
+    <form role="form" id="youtube_mini_search" action="#">
+      <header role="banner" class="header">
+      <h1>Youtube Mini Search Engine</h1>
+      </header>
+      <fieldset name="search-engine">
+        <legend>Search Engine</legend>  
+        <label for="js-query">Search for video</label>
         <input placeholder="Santorini" type="text" name="traveling" id="js-query" />
         <button type="submit">Search</button>
+      </fieldset>
       </form>
-      <div class="js-search-results">
-      </div>
-    </main>
+      <main role="main" class="js-search-results" aria-live="assertive" hidden>
+      </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="index.js"></script>
   </body>
